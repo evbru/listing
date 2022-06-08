@@ -1,0 +1,30 @@
+using System;
+namespace p6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите цифру n");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+           for (int i=10; i<100; i++)
+            {
+                int number, value = i, check = 0;
+                while (value>0)
+                {
+                    number = value % 10;
+                    value /= 10;
+                    if (number==n)
+                    {
+                        check = 1;
+                    }
+                }
+                if (i % n == 0 || check == 1)
+                {
+                    Console.WriteLine(i); 
+                }
+            }                     
+        }
+    }
+}
