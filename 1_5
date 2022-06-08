@@ -1,0 +1,18 @@
+using System;
+namespace p5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int n = int.Parse(Console.ReadLine());         
+            int value = 1;
+            while (value*value<=n)
+            {
+                Console.WriteLine(value);
+                value++;
+            }                     
+        }
+    }
+}
