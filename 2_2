@@ -1,0 +1,39 @@
+using System;
+namespace V4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите максимальное число ");
+            int max = int.Parse(Console.ReadLine());
+            Console.Write("Количество попыток ");
+            int n = int.Parse(Console.ReadLine());
+            Random r = new Random();
+            int k = r.Next(1, max);
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Введите своё число ");
+                int t = int.Parse(Console.ReadLine());
+                if (i == n - 1)
+                {
+                    Console.WriteLine("У вас закончилось количество попыток");
+                    break;
+                }
+
+                if (t == k)
+                {
+                    Console.WriteLine("Вы угадали");
+                    break;
+                }
+                else
+                {
+                    if (t > k)
+                        Console.WriteLine("Число меньше");
+                    if (t < k)
+                        Console.WriteLine("Число больше");
+                }
+            }
+        }
+    }
+} 
