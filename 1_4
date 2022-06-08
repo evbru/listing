@@ -1,0 +1,19 @@
+using System;
+namespace p4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int v = int.Parse(Console.ReadLine());         
+            int sum = 0;
+            for (int i = v; i > 0; i--)
+            {
+                sum += v%10;
+                v /= 10;
+            }               
+                Console.WriteLine(sum);           
+        }
+    }
+}
