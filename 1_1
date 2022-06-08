@@ -1,0 +1,17 @@
+using System;
+namespace p1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double S;
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int x = int.Parse(Console.ReadLine());
+            double y = x * 3.14 / 180;
+            S = Math.Round(a * b * Math.Sin(y), 1);
+            Console.WriteLine(S);
+        }
+    }
+}
